@@ -25,10 +25,24 @@ int main(void) {
     int length = 0;
 
     // TODO: ask for length and ensure it is between 1 and MAX_LENGTH.
-
+    do {
+        printf("How many numbers (1-%d)? ", MAX_LENGTH);
+        scanf("%d", &length);
+    } while (length < 1 || length > MAX_LENGTH);
     // TODO: read values into the array using a loop.
-
+    for (int i = 0; i < length; i++) {
+        printf("Value %d: ", i + 1);
+        scanf("%d", &data[i]);
+    }
+    printf("You entered: ");
+    for (int i = 0; i < length; i++) {
+        printf("%d ", data[i]);
+    }
+    printf("\nReversed: ");
+    for (int i = length - 1; i >= 0; i--) { 
+        printf("%d ", data[i]);
+    }
     // TODO: print values in original order, then print them in reverse order.
-
+    printf("\n");   
     return 0;
 }

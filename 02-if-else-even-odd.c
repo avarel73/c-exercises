@@ -19,6 +19,16 @@ int main(void) {
     printf("Enter an integer: ");
     scanf("%d", &number);
 
+    if(number == 0){
+        printf("Zero is even.");
+    }
+    else if(number % 2 == 0){
+        printf("%d is even.", number);
+    }
+    else{
+        printf("%d is odd.", number);
+    }
+
     // Add your if/else statements here to print the correct message.
 
     return 0;
